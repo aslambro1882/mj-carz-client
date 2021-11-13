@@ -43,7 +43,7 @@ const Myorders = () => {
 
     return (
         <div>
-            <TableContainer component={Paper} sx={{ border: '1px solid black', maxWidth: '1200px', mx: 'auto' }}>
+            <TableContainer component={Paper} sx={{ maxWidth: '1200px', mx: 'auto' }}>
                 <Table sx={{}} aria-label="Appointments table">
                     <TableHead>
                         <TableRow>
@@ -60,7 +60,7 @@ const Myorders = () => {
                         {myOrders?.map((row) => (
                             <TableRow
                                 key={row._id}
-                            // sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell sx={{ p: 0, width: '20%' }}>
                                     <img src={row.img} alt="" width="100%" />

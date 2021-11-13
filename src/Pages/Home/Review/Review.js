@@ -7,23 +7,20 @@ const Review = ({ reviewinfo }) => {
 
     return (
         <>
-            {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Paper sx={{ my: 2, height: '250px' }}>
-                    <Typography>{name}</Typography>
-                    <Typography>{review}</Typography>
-                </Paper>
+            <Grid xs={12} md={4}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', py: 4 }}>
+                    <Paper elevation={3} square sx={{ height: 250, width: 280, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <Box sx={{ width: 250 }}>
+                            <Typography variant="body1">{review}</Typography>
+                            <br />
+                            <Typography variant="h6">{name}</Typography>
+                            <Rating name="read-only" value={rating} readOnly />
+                        </Box>
 
-            </Box> */}
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}>
-                <Paper sx={{ height: '250px', minWidth: '350px', p: 3, pt: 8, mb: 3 }}>
-                    <Typography variant="body1">{review}</Typography>
-                    <br />
-                    <Typography variant="h6">{name}</Typography>
-                    <Rating name="read-only" value={rating} readOnly />
-                </Paper>
+                    </Paper>
 
-            </Box>
-
+                </Box>
+            </Grid>
         </>
     );
 };

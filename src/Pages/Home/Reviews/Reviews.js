@@ -6,7 +6,6 @@ import Carousel from 'react-material-ui-carousel'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './Reviews.css'
 import useAuth from '../../../hooks/useAuth.js';
 import { Box } from '@mui/system';
 
@@ -25,42 +24,19 @@ const Reviews = () => {
     }, [])
 
 
-    const options = {
-        loop: true,
-        center: true,
-        items: 3,
-        margin: 0,
-        autoplay: true,
-        dots: true,
-        autoplayTimeout: 8500,
-        smartSpeed: 450,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 3
-            }
-        }
-    };
-
     return (
-        <Box sx={{ backgroundColor: 'rgb(128,128,128)' }}>
+        <Box sx={{ backgroundColor: 'rgb(128,128,128)', my: 10 }}>
             <Container>
+                <Grid container spacing={2}>
 
-                <OwlCarousel id="customer-testimonoals" className="owl-carousel owl-theme" {...options}>
                     {
                         reviews?.map(review => <Review
                             key={review._id}
                             reviewinfo={review}
                         ></Review>)
                     }
-                </OwlCarousel>
 
+                </Grid>
             </Container >
         </Box>
     );

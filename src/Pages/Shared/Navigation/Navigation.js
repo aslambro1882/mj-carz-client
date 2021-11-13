@@ -86,12 +86,24 @@ const Navigation = () => {
                             <Link
                                 to="/home"
                             >
-                                <img src="https://cdn.mos.cms.futurecdn.net/q2ksruMo7ZyFhviMnBesCk-970-80.jpg.webp" alt="" width="75px" />
+                                <img src="https://i.ibb.co/NpR5MWx/255091842-613280056376133-2755557088828253877-n.jpg" alt="" width="120px" />
                             </Link>
                         </Typography>
                         <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', alignItems: 'center' }}>
                             <Box>
+                                <Button variant="text">
+                                    <Link
+                                        to="/home"
+                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
+                                    >Home</Link>
+                                </Button>
+                                <Button variant="text">
+                                    <Link
+                                        to="/cars"
+                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
+                                    >Cars</Link>
+                                </Button>
                                 <Button variant="text">
                                     <Link
                                         to="/dashboard"
