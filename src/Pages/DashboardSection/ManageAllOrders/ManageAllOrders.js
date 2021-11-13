@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
 
 
     useEffect(() => {
-        fetch(`https://mj-motors-cfa38.web.app/manageOrders`)
+        fetch(`http://localhost:5000/manageOrders`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [allOrders])
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
 
         console.log('shipped')
 
-        fetch(`https://mj-motors-cfa38.web.app/manageOrders/${id}`, {
+        fetch(`http://localhost:5000/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

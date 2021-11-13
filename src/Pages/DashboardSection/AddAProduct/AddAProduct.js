@@ -16,7 +16,7 @@ const AddAProduct = () => {
     }
 
     const handleAddProductSubmit = e => {
-        fetch("https://mj-motors-cfa38.web.app/cars", {
+        fetch("http://localhost:5000/cars", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

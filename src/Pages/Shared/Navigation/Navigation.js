@@ -13,6 +13,9 @@ import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import HomeIcon from '@mui/icons-material/Home';
+import ElectricCarIcon from '@mui/icons-material/ElectricCar';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
@@ -55,18 +58,46 @@ const Navigation = () => {
                     size="large"
                     color="inherit"
                 >
-                    <DashboardIcon />
+                    <HomeIcon />
                 </IconButton>
-                <p>Dashboard</p>
+                <Link
+                    sx={{ textDecoration: 'none' }}
+                    to="/home"
+                >Home</Link>
             </MenuItem>
             <MenuItem>
                 <IconButton
                     size="large"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    <DashboardIcon />
                 </IconButton>
-                <p>Profile</p>
+                <Link
+                    to="dashboard"
+                >Dashboard</Link>
+            </MenuItem>
+            <MenuItem>
+                <IconButton
+                    size="large"
+                    color="inherit"
+                >
+                    <ElectricCarIcon />
+                </IconButton>
+                <Link
+                    to="/cars"
+                >Cars</Link>
+            </MenuItem>
+            <MenuItem>
+                <IconButton
+                    size="large"
+                    color="inherit"
+                >
+                    <LogoutIcon />
+                </IconButton>
+                <Button
+                    sx={{ textDecoration: 'none', }}
+                    to="/cars"
+                >Logout</Button>
             </MenuItem>
         </Menu>
     );

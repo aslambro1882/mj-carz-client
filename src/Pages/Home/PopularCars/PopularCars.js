@@ -8,27 +8,33 @@ const PopularCars = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('https://mj-motors-cfa38.web.app/cars')
+        fetch('http://localhost:5000/cars')
             .then(res => res.json())
             .then(data => setCars(data.slice(8, 14)))
     }, [])
     return (
+
+
         <Container>
             <Typography variant="h4">Popular Cars</Typography>
             <Grid container spacing={2}>
-                {cars ?
+                {
                     cars.map(car => <PopularCar
                         key={car._id}
                         car={car}
                     ></PopularCar>)
-                    :
-                    <Box sx={{ display: 'flex' }}>
-                        <CircularProgress />
-                    </Box>
+
                 }
             </Grid>
         </Container>
+
+
+
     );
 };
 
 export default PopularCars;
+
+// {/* <Box sx={{ display: 'flex' }}>
+//     <CircularProgress />
+// </Box> */}

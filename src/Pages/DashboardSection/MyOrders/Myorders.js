@@ -15,7 +15,7 @@ const Myorders = () => {
     const [myOrders, setMyOrders] = useState();
 
     useEffect(() => {
-        fetch(`https://mj-motors-cfa38.web.app/orders?email=${user.email}`)
+        fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user.email])
@@ -24,7 +24,7 @@ const Myorders = () => {
     const handleOrderCancel = id => {
         const value = window.confirm('Are You Sure?')
         if (value) {
-            const uri = `https://mj-motors-cfa38.web.app/orders/${id}`
+            const uri = `http://localhost:5000/orders/${id}`
             fetch(uri, {
                 method: "DELETE"
             })
