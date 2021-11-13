@@ -18,7 +18,7 @@ const AddReview = () => {
         const reviewInfo = { review, rating: rate, name: user.displayName }
 
 
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://mj-motors-cfa38.web.app/reviews", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

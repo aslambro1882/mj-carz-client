@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const [manageCars, setManageCars] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cars`)
+        fetch(`https://mj-motors-cfa38.web.app/cars`)
             .then(res => res.json())
             .then(data => setManageCars(data))
     }, [])
@@ -25,7 +25,7 @@ const ManageProducts = () => {
     const handleDeleteCar = (id) => {
         const value = window.confirm('Are You Sure?')
         if (value) {
-            const uri = `http://localhost:5000/cars/${id}`
+            const uri = `https://mj-motors-cfa38.web.app/cars/${id}`
             fetch(uri, {
                 method: "DELETE"
             })

@@ -24,7 +24,7 @@ const ManageSingleOrder = ({ order }) => {
 
     const handleShipped = id => {
         order = { status: "Shipped" }
-        fetch(`http://localhost:5000/manageOrders/${id}`, {
+        fetch(`https://mj-motors-cfa38.web.app/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const ManageSingleOrder = ({ order }) => {
 
     const handlePending = id => {
         order = { status: "Pending" }
-        fetch(`http://localhost:5000/manageOrders/${id}`, {
+        fetch(`https://mj-motors-cfa38.web.app/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const ManageSingleOrder = ({ order }) => {
     const handleDelete = id => {
         const attension = window.confirm('Are You Sure?')
         if (attension) {
-            fetch(`http://localhost:5000/manageOrders/${id}`, {
+            fetch(`https://mj-motors-cfa38.web.app/manageOrders/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

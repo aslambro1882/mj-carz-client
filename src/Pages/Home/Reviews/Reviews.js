@@ -18,7 +18,7 @@ const Reviews = () => {
     console.log(reviews)
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://mj-motors-cfa38.web.app/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

@@ -37,7 +37,7 @@ const Checkout = () => {
         console.log(order)
 
         //send order to the server
-        fetch("http://localhost:5000/orders", {
+        fetch("https://mj-motors-cfa38.web.app/orders", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -56,7 +56,7 @@ const Checkout = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cars/${carid}`)
+        fetch(`https://mj-motors-cfa38.web.app/cars/${carid}`)
             .then(res => res.json())
             .then(data => setCar(data))
     }, [carid])
