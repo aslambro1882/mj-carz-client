@@ -1,9 +1,12 @@
 import { Grid, Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import PopularCar from '../PopularCar/PopularCar';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const PopularCars = () => {
     const [cars, setCars] = useState([]);
+
     useEffect(() => {
         fetch('https://mj-motors-cfa38.web.app/cars')
             .then(res => res.json())
@@ -13,11 +16,15 @@ const PopularCars = () => {
         <Container>
             <Typography variant="h4">Popular Cars</Typography>
             <Grid container spacing={2}>
-                {
+                {cars ?
                     cars.map(car => <PopularCar
                         key={car._id}
                         car={car}
                     ></PopularCar>)
+                    :
+                    <Box sx={{ display: 'flex' }}>
+                        <CircularProgress />
+                    </Box>
                 }
             </Grid>
         </Container>
