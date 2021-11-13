@@ -1,0 +1,137 @@
+[
+    {
+        "name": "2016 Chevrolet Corvette",
+        "img": "https://i.ibb.co/W0Kq2d0/2016-chevrolet-corvette.jpg",
+        "price": "45781",
+        "mileage": "3157",
+        "mpg": "20 City / 41 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2017 Chevrolet Corvette",
+        "img": "https://i.ibb.co/Kx7LMry/2017-chevrolet-corvette.jpg",
+        "price": "47896",
+        "mileage": "1781",
+        "mpg": "12 City / 31 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2019 Chevrolet Camaro",
+        "img": "https://i.ibb.co/5WndCDm/2019-chevrolet-camaro.jpg",
+        "price": "74568",
+        "mileage": "2759",
+        "mpg": "17 City / 37 Highway",
+        "engine": "6.4L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Chevrolet Silverado 1500",
+        "img": "https://i.ibb.co/f16s4z7/2020-chevrolet-silverado-1500.jpg",
+        "price": "45279",
+        "mileage": "2145",
+        "mpg": "15 City / 45 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Dodge Challenger",
+        "img": "https://i.ibb.co/fQNY9bV/2020-dodge-challenger.jpg",
+        "price": "65478",
+        "mileage": "1856",
+        "mpg": "16 City / 36 Highway",
+        "engine": "6.4L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Ford Fusion",
+        "img": "https://i.ibb.co/M77Z4yb/2020-ford-fusion.jpg",
+        "price": "58745",
+        "mileage": "1480",
+        "mpg": "17 City / 37 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Honda Civic",
+        "img": "https://i.ibb.co/Y3DMy1J/2020-honda-civic.jpg",
+        "price": "45784",
+        "mileage": "2275",
+        "mpg": "24 City / 34 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Mazda Mazda3",
+        "img": "https://i.ibb.co/S0xKq5N/2020-mazda-mazda3.jpg",
+        "price": "58421",
+        "mileage": "1735",
+        "mpg": "14 City / 34 Highway",
+        "engine": "6.4L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2020 Toyota Avalon",
+        "img": "https://i.ibb.co/LY3gChb/2020-toyota-avalon.webp",
+        "price": "65747",
+        "mileage": "1457",
+        "mpg": "16 City / 36 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Acura TLX",
+        "img": "https://i.ibb.co/HDGsvJx/2021-acura-tlx.jpg",
+        "price": "25475",
+        "mileage": "2540",
+        "mpg": "10 City / 30 Highway",
+        "engine": "6.4L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Chevrolet Camaro",
+        "img": "https://i.ibb.co/8XdXttV/2021-chevrolet-camaro.jpg",
+        "price": "68745",
+        "mileage": "2545",
+        "mpg": "12 City / 32 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Tesla Model Y",
+        "img": "https://i.ibb.co/PcVmhjV/2021-tesla-model-y.jpg",
+        "price": "57485",
+        "mileage": "1975",
+        "mpg": "17 City / 37 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Toyota Corolla",
+        "img": "https://i.ibb.co/V32ZptZ/2021-toyota-corolla.jpg",
+        "price": "35478",
+        "mileage": "1854",
+        "mpg": "16 City / 36 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Volkswagen Passat",
+        "img": "https://i.ibb.co/G3LQrFq/2021-volkswagen-passat.jpg",
+        "price": "65478",
+        "mileage": "1354",
+        "mpg": "15 City / 35 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    },
+    {
+        "name": "2021 Volvo V60",
+        "img": "https://i.ibb.co/bFwHkrF/2021-volvo-v60.jpg",
+        "price": "14587",
+        "mileage": "2547",
+        "mpg": "20 City / 30 Highway",
+        "engine": "6.2L V8 Supercharged",
+        "fueltype": "Gasoline"
+    }
+]
