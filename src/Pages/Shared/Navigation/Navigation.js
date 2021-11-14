@@ -176,7 +176,7 @@ const Navigation = () => {
                                     }
                                 </Button>
                             </Box>
-                            <Typography>{user.displayName.split('').slice(0, 10).toString().replace(/,/g, '')}</Typography>
+                            <Typography>{user?.displayName?.split(' ').slice(0, 10).toString().replace(/,/g, ' ')}</Typography>
                             <IconButton
                                 size="large"
                                 color="inherit"
