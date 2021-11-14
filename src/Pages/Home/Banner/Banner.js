@@ -37,7 +37,7 @@ const banner3 = {
 const Banner = () => {
 
     return (
-        <Carousel interval="10000000000">
+        <Carousel interval="5000">
             <Box style={banner1} sx={{ py: 5 }}>
                 <Container sx={{ height: '500' }}>
                     <Grid container spacing={2}>

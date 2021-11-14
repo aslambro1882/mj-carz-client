@@ -35,9 +35,25 @@ const Register = () => {
             <Grid item sx={{ display: { xs: 'none', md: 'block' }, height: '100vh' }} md={4}>
                 <img src="https://i.ibb.co/f0CyjfG/jakob-rosen-9-VXMt6-YRHEA-unsplash.jpg" alt="" height="100%" width="100%" />
             </Grid>
-            <Grid item xs={12} md={8} sx={{ backgroundColor: 'rgb(35,57,74)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Box sx={{ border: '2px solid white', width: '60%' }}>
-                    <Button variant="text" sx={{ display: 'flex' }}><Link style={{ textDecoration: 'none', color: 'rgb(255,255,255)' }} to="/login">Login</Link></Button>
+            <Grid item xs={12} md={8} sx={{ backgroundColor: 'rgb(35,57,74)', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <Box sx={{ maxWidth: '450px', width: '60%' }}>
+                    <Box sx={{ display: 'flex' }}>
+                        <Button variant="text" sx={{ display: 'flex', borderBottom: '3px solid white', mr: 2 }}>
+                            <Link
+                                style={{ textDecoration: 'none', color: 'rgb(255,255,255)' }}
+                                to="/login">Login</Link>
+                        </Button>
+                        <Button variant="text" sx={{ display: 'flex', borderBottom: '3px solid white', mr: 2 }}>
+                            <Link
+                                style={{ textDecoration: 'none', color: 'rgb(255,255,255)' }}
+                                to="/register">Register</Link>
+                        </Button>
+                        <Button variant="text" sx={{ display: 'flex', borderBottom: '3px solid white' }}>
+                            <Link
+                                style={{ textDecoration: 'none', color: 'rgb(255,255,255)' }}
+                                to="/home">Home</Link>
+                        </Button>
+                    </Box>
                     {
                         isLoading &&
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -86,13 +102,13 @@ const Register = () => {
                         <br />
 
                         <Button
-                            sx={{ my: 1, display: 'flex', width: '35%', backgroundColor: 'rgb(255,255,255)', color: 'rgb(63,57,74)', fontWeight: 600 }}
+                            sx={{ my: 1, display: 'flex', maxWidth: '50%', backgroundColor: 'rgb(255,255,255)', color: 'rgb(63,57,74)', fontWeight: 600, px: 4 }}
                             variant="contained" type="submit">Register</Button>
 
                     </form>
                     <Box sx={{ textAlign: 'start' }}>
                         <Typography sx={{ display: 'inline', fontSize: 12, color: 'rgb(255,255,255)' }} variant="body1">Or register with</Typography>
-                        <Button variant="text" onClick={handleGoogleSignIn}>Google</Button>
+                        <Button sx={{ color: 'white', fontSize: 15, fontWeight: 600 }} variant="text" onClick={handleGoogleSignIn}>Google</Button>
                     </Box>
                     {
                         user.email &&

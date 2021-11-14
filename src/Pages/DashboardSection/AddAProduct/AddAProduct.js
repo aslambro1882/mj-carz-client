@@ -16,7 +16,7 @@ const AddAProduct = () => {
     }
 
     const handleAddProductSubmit = e => {
-        fetch("https://pure-beach-57412.herokuapp.com/cars", {
+        fetch("http://pure-beach-57412.herokuapp.com/cars", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

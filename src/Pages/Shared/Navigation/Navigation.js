@@ -16,6 +16,7 @@ import useAuth from '../../../hooks/useAuth';
 import HomeIcon from '@mui/icons-material/Home';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 import LogoutIcon from '@mui/icons-material/Logout';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 
@@ -61,7 +62,7 @@ const Navigation = () => {
                     <HomeIcon />
                 </IconButton>
                 <Link
-                    sx={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'none', color: 'black', fontWeight: 600 }}
                     to="/home"
                 >Home</Link>
             </MenuItem>
@@ -73,7 +74,8 @@ const Navigation = () => {
                     <DashboardIcon />
                 </IconButton>
                 <Link
-                    to="dashboard"
+                    style={{ textDecoration: 'none', color: 'black', fontWeight: 600 }}
+                    to="/dashboard"
                 >Dashboard</Link>
             </MenuItem>
             <MenuItem>
@@ -84,21 +86,37 @@ const Navigation = () => {
                     <ElectricCarIcon />
                 </IconButton>
                 <Link
+                    style={{ textDecoration: 'none', color: 'black', fontWeight: 600 }}
                     to="/cars"
                 >Cars</Link>
             </MenuItem>
-            <MenuItem>
-                <IconButton
-                    size="large"
-                    color="inherit"
-                >
-                    <LogoutIcon />
-                </IconButton>
-                <Button
-                    sx={{ textDecoration: 'none', }}
-                    to="/cars"
-                >Logout</Button>
-            </MenuItem>
+            {user.email ?
+                <MenuItem>
+                    <IconButton
+                        size="large"
+                        color="inherit"
+                    >
+                        <LogoutIcon />
+                    </IconButton>
+                    <Button
+                        variant="text"
+                        to="/cars"
+                    >Logout</Button>
+                </MenuItem>
+                :
+                <MenuItem>
+                    <IconButton
+                        size="large"
+                        color="inherit"
+                    >
+                        <LoginIcon />
+                    </IconButton>
+                    <Link
+                        style={{ textDecoration: 'none', color: 'black', fontWeight: 600 }}
+                        to="/login"
+                    >Login</Link>
+                </MenuItem>
+            }
         </Menu>
     );
     return (
@@ -126,47 +144,51 @@ const Navigation = () => {
                                 <Button variant="text">
                                     <Link
                                         to="/home"
-                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
+                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: 18 }}
                                     >Home</Link>
                                 </Button>
                                 <Button variant="text">
                                     <Link
                                         to="/cars"
-                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
+                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: 18 }}
                                     >Cars</Link>
                                 </Button>
-                                <Button variant="text">
+                                <Button
+                                    variant="text">
                                     <Link
                                         to="/dashboard"
-                                        style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
+                                        style={{ textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: 18 }}
                                     >Dashboard</Link>
                                 </Button>
 
-                                {
-                                    user.email ?
-                                        <Button
-                                            style={{ me: 2, textDecoration: 'none', color: 'white', textTransform: 'capitalize' }}
-                                            onClick={logOut}
-                                        >Logout</Button>
-                                        :
-                                        <NavLink
-                                            style={{ me: 2, textDecoration: 'none', color: 'white' }}
-                                            to="/login"
-                                        >Login</NavLink>
-                                }
+                                <Button sx={{ textTransform: 'uppercase', fontSize: 18 }}>
+                                    {
+                                        user.email ?
+                                            <Button
+                                                style={{ ms: 5, textDecoration: 'none', color: 'white' }}
+                                                onClick={logOut}
+                                            >Logout</Button>
+                                            :
+                                            <NavLink
+                                                style={{ ms: 5, textDecoration: 'none', color: 'white' }}
+                                                to="/login"
+                                            >Login</NavLink>
+                                    }
+                                </Button>
                             </Box>
-                            {user?.phoURL ?
-                                <IconButton>
-                                    <img style={{ borderRadius: '50%', width: '40px' }} src={user?.photoURL} alt="" />
-                                </IconButton>
-                                :
-                                <IconButton
-                                    size="large"
-                                    color="inherit"
-                                >
-                                    <AccountCircle />
-                                </IconButton>
-                            }
+                            <Typography>{user.displayName.split('').slice(0, 10).toString().replace(/,/g, '')}</Typography>
+                            <IconButton
+                                size="large"
+                                color="inherit"
+                            >
+                                {
+                                    user?.photoURL ?
+                                        <img style={{ borderRadius: '50%', width: '40px' }} src={user?.photoURL} alt="" />
+                                        :
+                                        <AccountCircle sx={{ fontSize: '40px' }} />
+                                }
+                            </IconButton>
+
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton

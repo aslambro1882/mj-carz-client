@@ -24,7 +24,7 @@ const ManageSingleOrder = ({ order }) => {
 
     const handleShipped = id => {
         order = { status: "Shipped" }
-        fetch(`https://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
+        fetch(`http://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const ManageSingleOrder = ({ order }) => {
 
     const handlePending = id => {
         order = { status: "Pending" }
-        fetch(`https://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
+        fetch(`http://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const ManageSingleOrder = ({ order }) => {
     const handleDelete = id => {
         const attension = window.confirm('Are You Sure?')
         if (attension) {
-            fetch(`https://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
+            fetch(`http://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

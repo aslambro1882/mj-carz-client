@@ -15,7 +15,7 @@ const Myorders = () => {
     const [myOrders, setMyOrders] = useState();
 
     useEffect(() => {
-        fetch(`https://pure-beach-57412.herokuapp.com/orders?email=${user.email}`)
+        fetch(`http://pure-beach-57412.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user.email])
@@ -24,7 +24,7 @@ const Myorders = () => {
     const handleOrderCancel = id => {
         const value = window.confirm('Are You Sure?')
         if (value) {
-            const uri = `https://pure-beach-57412.herokuapp.com/orders/${id}`
+            const uri = `http://pure-beach-57412.herokuapp.com/orders/${id}`
             fetch(uri, {
                 method: "DELETE"
             })

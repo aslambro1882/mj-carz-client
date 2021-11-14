@@ -7,7 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = () => {
     return (
-        <Box sx={{ backgroundColor: 'black', py: 3 }}>
+        <Box sx={{ backgroundColor: 'black', py: 3, color: 'white' }}>
             <Grid container spacing={2}>
                 <Grid item xs={6} md={3}>
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 8 }}>
@@ -32,14 +32,20 @@ const Footer = () => {
                 </Grid>
                 <Grid item xs={6} md={3}>
                     <h4>Social Links</h4>
-                    <div className="icons mb-3">
-                        <FacebookIcon />
-                        <LinkedInIcon />
-                        <YouTubeIcon />
-                    </div>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', }}>
+                        <Box sx={{ backgroundColor: 'rgb(127,127,127)', borderRadius: '50%', width: 50, py: 1.2, mr: 2 }}>
+                            <FacebookIcon sx={{ fontSize: 30, }} />
+                        </Box>
+                        <Box sx={{ backgroundColor: 'rgb(127,127,127)', borderRadius: '50%', width: 50, py: 1.2, mr: 2 }}>
+                            <LinkedInIcon sx={{ fontSize: 30, }} />
+                        </Box>
+                        <Box sx={{ backgroundColor: 'rgb(127,127,127)', borderRadius: '50%', width: 50, py: 1.2 }}>
+                            <YouTubeIcon sx={{ fontSize: 30, }} />
+                        </Box>
+                    </Box>
                 </Grid>
             </Grid>
-            <small>&copy; BDToursAndTravels 2021. All rights reserved</small>
+            <small>&copy; Maruf Bin Solaiman || 2021 || All rights reserved</small>
         </Box>
     );
 };

@@ -18,7 +18,7 @@ const AddReview = () => {
         const reviewInfo = { review, rating: rate, name: user.displayName }
 
 
-        fetch("https://pure-beach-57412.herokuapp.com/reviews", {
+        fetch("http://pure-beach-57412.herokuapp.com/reviews", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
