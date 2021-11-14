@@ -18,7 +18,7 @@ const Reviews = () => {
     console.log(reviews)
 
     useEffect(() => {
-        fetch("https://mj-motors-cfa38.web.app/reviews")
+        fetch("https://pure-beach-57412.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

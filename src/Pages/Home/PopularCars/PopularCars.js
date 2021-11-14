@@ -8,7 +8,7 @@ const PopularCars = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('https://mj-motors-cfa38.web.app/cars')
+        fetch('https://pure-beach-57412.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setCars(data.slice(8, 14)))
     }, [])

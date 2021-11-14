@@ -37,7 +37,7 @@ const Checkout = () => {
         console.log(order)
 
         //send order to the server
-        fetch("https://mj-motors-cfa38.web.app/orders", {
+        fetch("https://pure-beach-57412.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -56,7 +56,7 @@ const Checkout = () => {
     }
 
     useEffect(() => {
-        fetch(`https://mj-motors-cfa38.web.app/cars/${carid}`)
+        fetch(`https://pure-beach-57412.herokuapp.com/cars/${carid}`)
             .then(res => res.json())
             .then(data => setCar(data))
     }, [carid])

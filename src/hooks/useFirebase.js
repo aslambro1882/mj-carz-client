@@ -94,7 +94,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://mj-motors-cfa38.web.app/users/${user.email}`)
+        fetch(`https://pure-beach-57412.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -118,7 +118,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch("https://mj-motors-cfa38.web.app/users", {
+        fetch("https://pure-beach-57412.herokuapp.com/users", {
             method: method,
             headers: {
                 'content-type': 'application/json'

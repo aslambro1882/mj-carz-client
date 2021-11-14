@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
 
 
     useEffect(() => {
-        fetch(`https://mj-motors-cfa38.web.app/manageOrders`)
+        fetch(`https://pure-beach-57412.herokuapp.com/manageOrders`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [allOrders])
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
 
         console.log('shipped')
 
-        fetch(`https://mj-motors-cfa38.web.app/manageOrders/${id}`, {
+        fetch(`https://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
