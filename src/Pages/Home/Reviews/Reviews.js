@@ -10,7 +10,6 @@ import { Box } from '@mui/system';
 const Reviews = () => {
 
     const [reviews, setReviews] = useState([]);
-    console.log(reviews)
 
     useEffect(() => {
         fetch("https://pure-beach-57412.herokuapp.com/reviews")

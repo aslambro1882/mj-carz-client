@@ -47,13 +47,15 @@ const Myorders = () => {
                 <Table sx={{}} aria-label="Appointments table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>
-                                <Typography variant="h5">Order Details</Typography>
-                            </TableCell>
-                            {/* <TableCell align="right">Time</TableCell>
-                            <TableCell align="right">Treatment</TableCell>
-                            <TableCell align="right">Action</TableCell>
-                            <TableCell align="right">Action</TableCell> */}
+                            {/* <TableCell>
+                                <Typography variant="h5">Order Img</Typography>
+                            </TableCell> */}
+                            <TableCell align="left">Order Image</TableCell>
+                            <TableCell align="left">Car Name</TableCell>
+                            <TableCell align="left">Engine</TableCell>
+                            <TableCell align="left">Price</TableCell>
+                            <TableCell align="left">Status</TableCell>
+                            <TableCell align="left">Action</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -71,11 +73,14 @@ const Myorders = () => {
                                 <TableCell sx={{ width: '20%' }}>
                                     <Typography>{row.engine}</Typography>
                                 </TableCell>
-                                <TableCell sx={{ width: '15%' }}>
+                                {/* <TableCell sx={{ width: '15%' }}>
                                     <Typography>{row.mileage}</Typography>
-                                </TableCell>
+                                </TableCell> */}
                                 <TableCell sx={{ width: '25%' }}>
                                     <Typography>${row.price}</Typography>
+                                </TableCell>
+                                <TableCell sx={{ width: '25%' }}>
+                                    <Typography>{row.status}</Typography>
                                 </TableCell>
                                 <TableCell sx={{ width: '25%' }}>
                                     <Button

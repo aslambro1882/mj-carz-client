@@ -10,15 +10,12 @@ const Checkout = () => {
     const { user } = useAuth();
     const initialInfo = { customarName: user.displayName, email: user.email, phone: '' }
     const [bookingInfo, setBookingInfo] = useState(initialInfo);
-    // console.log(bookingInfo);
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
-        console.log('field:', field, 'value:', value)
         const newInfo = { ...bookingInfo };
         newInfo[field] = value;
-        console.log(bookingInfo)
         setBookingInfo(newInfo);
     }
 
@@ -34,7 +31,6 @@ const Checkout = () => {
             price
         }
         order.status = 'pending'
-        console.log(order)
 
         //send order to the server
         fetch("https://pure-beach-57412.herokuapp.com/orders", {
@@ -46,7 +42,6 @@ const Checkout = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId) {
                     alert('Order Placed Successfully')
                 }
