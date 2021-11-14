@@ -13,7 +13,7 @@ const ManageAllOrders = () => {
 
 
     useEffect(() => {
-        fetch(`http://pure-beach-57412.herokuapp.com/manageOrders`)
+        fetch(`https://pure-beach-57412.herokuapp.com/manageOrders`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [allOrders])

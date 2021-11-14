@@ -14,7 +14,7 @@ const ManageProducts = () => {
     const [manageCars, setManageCars] = useState();
 
     useEffect(() => {
-        fetch(`http://pure-beach-57412.herokuapp.com/cars`)
+        fetch(`https://pure-beach-57412.herokuapp.com/cars`)
             .then(res => res.json())
             .then(data => setManageCars(data))
     }, [])
@@ -24,7 +24,7 @@ const ManageProducts = () => {
     const handleDeleteCar = (id) => {
         const value = window.confirm('Are You Sure?')
         if (value) {
-            const uri = `http://pure-beach-57412.herokuapp.com/cars/${id}`
+            const uri = `https://pure-beach-57412.herokuapp.com/cars/${id}`
             fetch(uri, {
                 method: "DELETE"
             })
