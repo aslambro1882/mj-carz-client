@@ -13,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch("http://localhost:5000/orders/admin", {
+        fetch("https://mj-motors-cfa38.web.app/orders/admin", {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

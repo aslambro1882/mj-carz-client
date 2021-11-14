@@ -5,7 +5,7 @@ import AllCar from '../AllCar/AllCar';
 const AllCars = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://mj-motors-cfa38.web.app/cars')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
