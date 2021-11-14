@@ -1,5 +1,5 @@
 import { Grid, Paper, Rating, Typography } from '@mui/material';
-import { Box, minWidth } from '@mui/system';
+import { Box } from '@mui/system';
 import React from 'react';
 
 const Review = ({ reviewinfo }) => {

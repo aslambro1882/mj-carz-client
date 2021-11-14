@@ -30,9 +30,11 @@ const AddReview = () => {
                 console.log(data);
                 if (data.insertedId) {
                     setSuccess(true);
+                    setFailed(false);
                 }
                 else {
                     setSuccess(false);
+                    setFailed(true)
                 }
 
             })

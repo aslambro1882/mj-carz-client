@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,14 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import ManageSingleOrder from '../ManageSingleOrder/ManageSingleOrder';
 
 const ManageAllOrders = () => {
-    const { user } = useAuth();
     const [allOrders, setAllOrders] = useState();
 
 
@@ -23,48 +17,6 @@ const ManageAllOrders = () => {
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [allOrders])
-
-
-
-
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const handleShipped = id => {
-
-
-        console.log('shipped')
-
-        fetch(`http://pure-beach-57412.herokuapp.com/manageOrders/${id}`, {
-            method: "PUT",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(allOrders)
-        })
-
-        setAnchorEl(null)
-    }
-
-    const handlePending = id => {
-        console.log('Pending')
-        setAnchorEl(null)
-    }
-
-    const handleDelete = id => {
-        console.log('Delete')
-        setAnchorEl(null)
-    }
-
-
-
 
 
     return (

@@ -4,7 +4,7 @@ import EvStationIcon from '@mui/icons-material/EvStation';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 import { Box } from '@mui/system';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AllCar = ({ car }) => {
     const { name, price, mpg, img, _id, engine } = car;

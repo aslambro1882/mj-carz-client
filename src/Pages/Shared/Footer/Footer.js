@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import YouTubeIcon from '@mui/icons-material/YouTube';
