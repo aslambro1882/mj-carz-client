@@ -100,7 +100,7 @@ const Navigation = () => {
                     </IconButton>
                     <Button
                         variant="text"
-                        to="/cars"
+                        onClick={logOut}
                     >Logout</Button>
                 </MenuItem>
                 :

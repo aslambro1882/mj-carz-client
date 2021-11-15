@@ -6,17 +6,22 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Typography } from '@mui/material';
+import { CircularProgress, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import { Box } from '@mui/system';
 
 const ManageProducts = () => {
 
     const [manageCars, setManageCars] = useState();
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         fetch(`https://pure-beach-57412.herokuapp.com/cars`)
             .then(res => res.json())
-            .then(data => setManageCars(data))
+            .then(data => {
+                setManageCars(data);
+                setLoading(true);
+            })
     }, [])
 
 
@@ -60,6 +65,13 @@ const ManageProducts = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
+                        {
+                            !loading &&
+                            <Box sx={{ display: 'flex', alignItems: 'center', height: '100vh', justifyContent: 'center' }}>
+                                <CircularProgress />
+                            </Box>
+
+                        }
                         {manageCars?.map((row) => (
                             <TableRow
                                 key={row._id}

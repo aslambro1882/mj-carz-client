@@ -7,15 +7,21 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ManageSingleOrder from '../ManageSingleOrder/ManageSingleOrder';
+import { Box } from '@mui/system';
+import { CircularProgress } from '@mui/material';
 
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState();
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
         fetch(`https://pure-beach-57412.herokuapp.com/manageOrders`)
             .then(res => res.json())
-            .then(data => setAllOrders(data))
+            .then(data => {
+                setAllOrders(data);
+                setLoading(true)
+            })
     }, [allOrders])
 
 
@@ -35,6 +41,13 @@ const ManageAllOrders = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
+                        {
+                            !loading &&
+                            <Box sx={{ display: 'flex', alignItems: 'center', height: '100vh', justifyContent: 'center' }}>
+                                <CircularProgress />
+                            </Box>
+
+                        }
                         {allOrders?.map(row => <ManageSingleOrder
                             key={row._id}
                             order={row}

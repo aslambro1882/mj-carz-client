@@ -7,17 +7,22 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Typography } from '@mui/material';
+import { CircularProgress, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import { Box } from '@mui/system';
 
 const Myorders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState();
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         fetch(`https://pure-beach-57412.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
-            .then(data => setMyOrders(data))
+            .then(data => {
+                setMyOrders(data);
+                setLoading(true)
+            })
     }, [user.email])
 
 
@@ -59,6 +64,13 @@ const Myorders = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
+                        {
+                            !loading &&
+                            <Box sx={{ display: 'flex', alignItems: 'center', height: '100vh', justifyContent: 'center' }}>
+                                <CircularProgress />
+                            </Box>
+
+                        }
                         {myOrders?.map((row) => (
                             <TableRow
                                 key={row._id}
